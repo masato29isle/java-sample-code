@@ -1,0 +1,5 @@
+application {
+    mainClassName = 'com.github.masato29isle.sample.LambdaSample'
+}
+
+
