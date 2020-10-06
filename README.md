@@ -7,4 +7,4 @@
 * ここはこうしたほうが良い等の改善ポイントがございましたら、PullRequestいただけますと助かります
 
 ## 現在追加済み項目
-* [java-lambda](./README.md)
+* [java-lambda](./lambda-sample/README.md)
