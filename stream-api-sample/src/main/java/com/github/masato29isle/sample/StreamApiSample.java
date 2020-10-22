@@ -15,7 +15,7 @@ public class StreamApiSample {
         // Stream-API
         System.out.println(ExecutionCategory.STREAM_API.execute(targetList));
         // Non-Stream-API
-        System.out.println(ExecutionCategory.STREAM_API.execute(targetList));
+        System.out.println(ExecutionCategory.NON_STREAM_API.execute(targetList));
     }
 
 }
