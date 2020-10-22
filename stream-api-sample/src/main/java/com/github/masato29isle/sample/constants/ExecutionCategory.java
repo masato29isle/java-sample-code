@@ -4,7 +4,6 @@ import com.github.masato29isle.sample.service.NonStreamApiService;
 import com.github.masato29isle.sample.service.SampleService;
 import com.github.masato29isle.sample.service.StreamApiService;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**
