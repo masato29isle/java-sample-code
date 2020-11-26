@@ -1,4 +1,5 @@
 rootProject.name = 'java-sample-code'
 include 'lambda-sample'
 include 'stream-api-sample'
+include 'optional-sample'
 
