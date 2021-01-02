@@ -1,6 +1,5 @@
 package com.github.masato29isle.sample.service;
 
-import com.github.masato29isle.sample.repository.SaleInfoRepository;
 import com.github.masato29isle.sample.repository.SaleInfoRepository2;
 
 import java.util.Calendar;
