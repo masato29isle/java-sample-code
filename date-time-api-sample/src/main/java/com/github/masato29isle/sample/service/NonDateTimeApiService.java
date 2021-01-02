@@ -8,7 +8,7 @@ import java.util.Date;
 
 public class NonDateTimeApiService implements SampleService {
 
-    private SaleInfoRepository2 saleInfoRepository;
+    private final SaleInfoRepository2 saleInfoRepository;
 
     public NonDateTimeApiService(SaleInfoRepository2 saleInfoRepository) {
         this.saleInfoRepository = saleInfoRepository;

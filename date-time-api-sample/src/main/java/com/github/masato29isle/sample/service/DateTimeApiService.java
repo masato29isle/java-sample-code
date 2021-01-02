@@ -7,7 +7,7 @@ import java.time.temporal.ChronoUnit;
 
 public class DateTimeApiService implements SampleService {
 
-    private SaleInfoRepository saleInfoRepository;
+    private final SaleInfoRepository saleInfoRepository;
 
     public DateTimeApiService(SaleInfoRepository saleInfoRepository) {
         this.saleInfoRepository = saleInfoRepository;
