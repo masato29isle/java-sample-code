@@ -5,8 +5,14 @@ import com.github.masato29isle.sample.repository.SaleInfoRepository2;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * Non-Date-Time-Api-Sample実行サービス
+ */
 public class NonDateTimeApiService implements SampleService {
 
+    /**
+     * 売上情報リポジトリ(Non-Date-Time-API版)
+     */
     private final SaleInfoRepository2 saleInfoRepository;
 
     public NonDateTimeApiService(SaleInfoRepository2 saleInfoRepository) {

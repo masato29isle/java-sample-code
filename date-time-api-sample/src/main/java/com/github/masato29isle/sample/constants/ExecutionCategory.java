@@ -19,12 +19,20 @@ public enum ExecutionCategory {
      */
     NON_DATE_TIME_API(new NonDateTimeApiService(new SaleInfoRepository2()));
 
+    /**
+     * Sample-Service
+     */
     private final SampleService sampleService;
 
     private ExecutionCategory(SampleService sampleService) {
         this.sampleService = sampleService;
     }
 
+    /**
+     * Sample-Serviceを実行する
+     *
+     * @return Sample-Service実行結果
+     */
     public boolean execute() {
         return sampleService.checkNotSaleMoreThanOneWeek("00001");
     }
