@@ -1,7 +1,7 @@
 package com.github.masato29isle.sample.constants;
 
 import com.github.masato29isle.sample.repository.SaleInfoRepository;
-import com.github.masato29isle.sample.repository.SaleInfoRepository2;
+import com.github.masato29isle.sample.repository.SaleInfo2Repository;
 import com.github.masato29isle.sample.service.DateTimeApiService;
 import com.github.masato29isle.sample.service.NonDateTimeApiService;
 import com.github.masato29isle.sample.service.SampleService;
@@ -17,7 +17,7 @@ public enum ExecutionCategory {
     /**
      * Non-Date-Time-Api
      */
-    NON_DATE_TIME_API(new NonDateTimeApiService(new SaleInfoRepository2()));
+    NON_DATE_TIME_API(new NonDateTimeApiService(new SaleInfo2Repository()));
 
     /**
      * Sample-Service
@@ -31,10 +31,11 @@ public enum ExecutionCategory {
     /**
      * Sample-Serviceを実行する
      *
+     * @param storeId 店舗ID
      * @return Sample-Service実行結果
      */
-    public boolean execute() {
-        return sampleService.checkNotSaleMoreThanOneWeek("00001");
+    public boolean execute(String storeId) {
+        return sampleService.checkNotSaleMoreThanOneWeek(storeId);
     }
 
 }

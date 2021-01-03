@@ -4,6 +4,7 @@ import com.github.masato29isle.sample.repository.SaleInfoRepository;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
+import java.util.Optional;
 
 /**
  * Date-Time-Api-Sample実行サービス
@@ -21,10 +22,10 @@ public class DateTimeApiService implements SampleService {
 
     @Override
     public boolean checkNotSaleMoreThanOneWeek(String storeId) {
-        LocalDateTime finalSalesDateTime = saleInfoRepository.getFinalSaleTime(storeId)
-                .orElseThrow(() -> new IllegalArgumentException("指定された店舗情報は存在しません"));
+        LocalDateTime finalSaleTime = saleInfoRepository.getFinalSaleTime(storeId)
+                .orElse(LocalDateTime.MIN);
 
-        return finalSalesDateTime.isBefore(LocalDateTime.now()
+        return finalSaleTime.isBefore(LocalDateTime.now()
                 .minusWeeks(1)
                 .truncatedTo(ChronoUnit.DAYS));
     }
