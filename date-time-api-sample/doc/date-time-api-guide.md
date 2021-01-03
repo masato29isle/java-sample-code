@@ -60,10 +60,10 @@ LocalDate targetBeforeTime = LocalTime.of(12,45).minusHours(2);
 // LocalDateTime
 // 指定日付から2週間後の日付を取得
 // 2021-01-04 00:00:00
-LocalDate targetAfterDate = LocalDate.of(2020,12,21).plusWeeks(2);
+LocalDateTime targetAfterDate = LocalDateTime.of(2020,12,21).plusWeeks(2);
 // 指定日付から2時間前の日付を取得
 // 2020-12-20 22:00:00
-LocalDate targetBeforeDate = LocalDate.of(2020,12,21).minusHours(2);
+LocalDateTime targetBeforeDate = LocalDateTime.of(2020,12,21).minusHours(2);
 ```
 
 その他使い方よび詳細については以下参照  
