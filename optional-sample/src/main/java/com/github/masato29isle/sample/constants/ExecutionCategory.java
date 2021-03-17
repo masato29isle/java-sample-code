@@ -24,7 +24,7 @@ public enum ExecutionCategory {
      */
     private final SampleService sampleService;
 
-    private ExecutionCategory(SampleService sampleService) {
+    ExecutionCategory(SampleService sampleService) {
         this.sampleService = sampleService;
     }
 
