@@ -10,12 +10,12 @@ public class Order {
     /**
      * 注文ID
      */
-    private String orderId;
+    private final String orderId;
 
     /**
      * 注文金額
      */
-    private int price;
+    private final int price;
 
     /**
      * コンストラクタ
