@@ -3,7 +3,6 @@ package com.github.masato29isle.sample.repository;
 import com.github.masato29isle.sample.model.Order;
 
 import java.util.List;
-import java.util.Optional;
 
 public class OrderNonOptionalRepositoryImpl implements OrderNonOptionalRepository {
 
@@ -15,13 +14,11 @@ public class OrderNonOptionalRepositoryImpl implements OrderNonOptionalRepositor
 
     @Override
     public Order getOrder(String orderId) {
-        Order targetOrder = null;
         for (Order order : DEFAULT_ORDER_LIST) {
             if(order.isOrder(orderId)) {
-                targetOrder = order;
-                break;
+                return order;
             }
         }
-        return targetOrder;
+        return null;
     }
 }

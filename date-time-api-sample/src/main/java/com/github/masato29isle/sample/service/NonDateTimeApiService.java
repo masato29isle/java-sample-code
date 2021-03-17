@@ -47,10 +47,6 @@ public class NonDateTimeApiService implements SampleService {
         long diffMilliTime = currentDateTime.getTimeInMillis() - finalSaleTime.getTime();
         long diffDay = diffMilliTime / (1000 * 60 * 60 * 24);
 
-        if (diffDay >= 7) {
-            return true;
-        } else {
-            return false;
-        }
+        return diffDay >= 7;
     }
 }

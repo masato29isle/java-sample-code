@@ -35,7 +35,7 @@ public enum ExecutionCategory {
      */
     private final LambdaExecution lambdaExecution;
 
-    private ExecutionCategory(String value, LambdaExecution lambdaExecution) {
+    ExecutionCategory(String value, LambdaExecution lambdaExecution) {
         this.value = value;
         this.lambdaExecution = lambdaExecution;
     }
