@@ -15,9 +15,9 @@ public class SaleInfo {
     /**
      * 最終売上日時
      */
-    private final Optional<LocalDateTime> finalSaleTime;
+    private final LocalDateTime finalSaleTime;
 
-    public SaleInfo(String storeId, Optional<LocalDateTime> finalSaleTime) {
+    public SaleInfo(String storeId, LocalDateTime finalSaleTime) {
         this.storeId = storeId;
         this.finalSaleTime = finalSaleTime;
     }
@@ -38,6 +38,6 @@ public class SaleInfo {
      * @return 最終売上日時
      */
     public Optional<LocalDateTime> getFinalSaleTime() {
-        return finalSaleTime;
+        return Optional.ofNullable(finalSaleTime);
     }
 }

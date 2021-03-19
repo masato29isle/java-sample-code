@@ -15,9 +15,9 @@ public class SaleInfoRepository {
      * 既定売上情報リスト
      */
     private static final List<SaleInfo> DEFAULT_SALE_INFO_LIST = List.of(
-            new SaleInfo("0001", Optional.of(LocalDateTime.of(2020, 12, 12, 10, 45)))
-            , new SaleInfo("0002", Optional.of(LocalDateTime.of(2020, 12, 20, 10, 45)))
-            , new SaleInfo("0003", Optional.empty())
+            new SaleInfo("0001", LocalDateTime.of(2020, 12, 12, 10, 45))
+            , new SaleInfo("0002", LocalDateTime.of(2020, 12, 20, 10, 45))
+            , new SaleInfo("0003", null)
     );
 
     /**
@@ -33,6 +33,4 @@ public class SaleInfoRepository {
                 .orElseThrow(() -> new IllegalArgumentException("指定された店舗情報は存在しません"))
                 .getFinalSaleTime();
     }
-
-    ;
 }
