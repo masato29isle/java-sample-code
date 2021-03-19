@@ -7,6 +7,7 @@ import java.time.Clock;
 import java.time.Instant;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * Non-Date-Time-Api-Sample実行サービス
@@ -28,8 +29,8 @@ public class NonDateTimeApiService implements SampleService {
     }
 
     public NonDateTimeApiService(SaleInfo2Repository saleInfoRepository, Clock clock) {
-        this.saleInfoRepository = saleInfoRepository;
-        this.clock = clock;
+        this.saleInfoRepository = Objects.requireNonNull(saleInfoRepository);
+        this.clock = Objects.requireNonNull(clock);
     }
 
     @Override

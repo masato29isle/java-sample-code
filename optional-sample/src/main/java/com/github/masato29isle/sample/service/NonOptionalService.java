@@ -3,6 +3,8 @@ package com.github.masato29isle.sample.service;
 import com.github.masato29isle.sample.model.Order;
 import com.github.masato29isle.sample.repository.OrderNonOptionalRepository;
 
+import java.util.Objects;
+
 /**
  * Non-Optional-実行サービス
  */
@@ -14,7 +16,7 @@ public class NonOptionalService implements SampleService {
     private final OrderNonOptionalRepository orderNonOptionalRepository;
 
     public NonOptionalService(OrderNonOptionalRepository orderNonOptionalRepository) {
-        this.orderNonOptionalRepository = orderNonOptionalRepository;
+        this.orderNonOptionalRepository = Objects.requireNonNull(orderNonOptionalRepository);
     }
 
     @Override

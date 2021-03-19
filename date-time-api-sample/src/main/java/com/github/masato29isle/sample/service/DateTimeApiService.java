@@ -4,6 +4,7 @@ import com.github.masato29isle.sample.repository.SaleInfoRepository;
 
 import java.time.*;
 import java.time.temporal.ChronoUnit;
+import java.util.Objects;
 
 /**
  * Date-Time-Api-Sample実行サービス
@@ -25,8 +26,8 @@ public class DateTimeApiService implements SampleService {
     }
 
     public DateTimeApiService(SaleInfoRepository saleInfoRepository, Clock clock) {
-        this.saleInfoRepository = saleInfoRepository;
-        this.clock = clock;
+        this.saleInfoRepository = Objects.requireNonNull(saleInfoRepository);
+        this.clock = Objects.requireNonNull(clock);
     }
 
     @Override
