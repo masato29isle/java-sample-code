@@ -16,9 +16,9 @@ public class SaleInfo2Repository {
      * 既定売上情報リスト
      */
     private static final List<SaleInfo2> DEFAULT_SALE_INFO_LIST = List.of(
-            new SaleInfo2("0001", Optional.of(DateUtil.createDate(2020, 12, 12, 10, 45)))
-            , new SaleInfo2("0002", Optional.of(DateUtil.createDate(2020, 12, 20, 10, 45)))
-            , new SaleInfo2("0003", Optional.empty())
+            new SaleInfo2("0001", DateUtil.createDate(2020, 12, 12, 10, 45))
+            , new SaleInfo2("0002", DateUtil.createDate(2020, 12, 20, 10, 45))
+            , new SaleInfo2("0003", null)
     );
 
     /**

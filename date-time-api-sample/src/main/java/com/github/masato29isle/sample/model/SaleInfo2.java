@@ -15,9 +15,9 @@ public class SaleInfo2 {
     /**
      * 最終売上日時
      */
-    private final Optional<Date> finalSaleTime;
+    private final Date finalSaleTime;
 
-    public SaleInfo2(String storeId, Optional<Date> finalSaleTime) {
+    public SaleInfo2(String storeId, Date finalSaleTime) {
         this.storeId = storeId;
         this.finalSaleTime = finalSaleTime;
     }
@@ -38,6 +38,6 @@ public class SaleInfo2 {
      * @return 最終売上日時
      */
     public Optional<Date> getFinalSaleTime() {
-        return finalSaleTime;
+        return Optional.ofNullable(finalSaleTime);
     }
 }
