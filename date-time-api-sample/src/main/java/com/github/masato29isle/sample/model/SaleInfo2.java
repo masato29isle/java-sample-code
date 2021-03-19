@@ -18,6 +18,9 @@ public class SaleInfo2 {
     private final Date finalSaleTime;
 
     public SaleInfo2(String storeId, Date finalSaleTime) {
+        if (storeId == null || storeId.isEmpty()) {
+            throw new IllegalArgumentException("店舗IDの指定は必須です");
+        }
         this.storeId = storeId;
         this.finalSaleTime = finalSaleTime;
     }
